@@ -1,6 +1,19 @@
+
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i =0; i< array.length -1; i++){
+    let diff = target-array[i]
+    for (j=i+1; j<array.length; j++){
+      if (diff === array[j]){
+        return true
+      }
+    }
+  }
+  return false
 }
+
+
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -32,3 +45,46 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+
+
+
+
+
+
+// IGNORE FROM HERE ON
+
+// function hasTargetSum(array, target) {
+//   // Write your algorithm here
+//   for (let i=0; i<array.length-1; i++){
+//     for (elem of array){
+//       return array[i] + elem === target
+//     }
+//   }
+// }
+
+
+
+// function hasTargetSum(array, target) {
+//   // Write your algorithm here
+//   for (elem of array){
+//     let diff = target - elem
+//     return array.includes(diff)
+//   }
+// }
+
+
+// function hasTargetSum(array, target) {
+//   // Write your algorithm here
+//   for (let i =0; i< array.length -1; i++){
+//     let diff = target-array[i]
+//     for (j=i+1; j<array.length; j++){
+//       // return diff === elem
+//       if (diff === array[j]){
+//         return true
+//       }
+//     }
+//   }
+//   return false
+// }
+
